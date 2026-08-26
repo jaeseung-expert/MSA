@@ -410,7 +410,8 @@ a{color:var(--accent-deep)}
         <div class="sheet-row">
           <div class="sheet">
             <table>
-              <tr><th></th><th>표본번호</th><th>표준(참값)</th><th>검사자1<br>Try #1</th><th>검사자1<br>Try #2</th><th>검사자2<br>Try #1</th><th>검사자2<br>Try #2</th></tr>
+              <tr><th rowspan="2"></th><th rowspan="2">표본번호</th><th rowspan="2">표준(참값)</th><th colspan="2">검사자1</th><th colspan="2">검사자2</th></tr>
+              <tr><th>Try #1</th><th>Try #2</th><th>Try #1</th><th>Try #2</th></tr>
               <tr><td class="idx">1</td><td class="lbl">1</td><td class="lbl">양품</td><td>양품</td><td>양품</td><td>양품</td><td>양품</td></tr>
               <tr><td class="idx">2</td><td class="lbl">2</td><td class="lbl">불량</td><td>불량</td><td>양품</td><td>불량</td><td>불량</td></tr>
               <tr><td class="idx">…</td><td class="lbl">…</td><td class="lbl">…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
@@ -419,7 +420,7 @@ a{color:var(--accent-deep)}
         </div>
       </div>
     </div>
-    <p class="note">위는 측정자수=2 · 반복횟수=2일 때의 표 모양입니다. <b>검사자1, 검사자2…</b> 그룹 라벨은 측정자수에 맞춰 자동 생성되며 <b>이름을 바꿀 수 없습니다</b>(내부적으로 검사자1, 2… 순서로만 구분).
+    <p class="note">위는 측정자수=2 · 반복횟수=2일 때의 표 모양입니다. 헤더는 <b>2행으로 표시</b>됩니다 — 위 행에 <b>검사자1, 검사자2…</b> 그룹 라벨(측정자수에 맞춰 자동 생성, 이름은 바꿀 수 없음), 아래 행에 각 검사자의 <b>Try #1, Try #2…</b> 반복 열이 나옵니다. <b>표본번호·표준(참값)</b>은 그룹이 없으므로 두 헤더 행을 세로로 합쳐 한 칸으로 표시됩니다. 이 2행짜리 헤더는 표를 아래로 스크롤해도 상단에 고정되어 항상 보입니다.
       해당 시행을 하지 않은 셀은 <b>공란으로 두면 조용히 분석에서 제외</b>되며(오류 아님), 표본번호가 빈 행이나 응답이 전부 공란인 행만 실행 시 확인창에 안내됩니다.</p>
     <p class="note" style="border-left-color:#c0392b"><b>v2.1 · 옵션을 바꾸면 표가 다시 그려집니다</b> —
       측정자수·반복횟수 값을 바꾸면 표의 열 구성이 새로 짜여집니다. 표에 이미 입력된 값이 있으면
